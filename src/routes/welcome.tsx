@@ -1,6 +1,9 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { HeartsBackground } from "@/components/HeartsBackground";
+import memory1 from "@/assets/memory1-chat.jpeg";
+import memory2 from "@/assets/memory2-record.jpeg";
+import memory3 from "@/assets/memory3-photo.jpeg";
 
 export const Route = createFileRoute("/welcome")({
   component: WelcomePage,
@@ -11,27 +14,26 @@ export const Route = createFileRoute("/welcome")({
 
 const NAME = "HELLO DHARAA!!!";
 
-// Placeholder photos — replace with real ones later
 const MEMORIES = [
   {
     title: "Memory 1",
-    caption: "The first time we laughed till our stomachs hurt 💚",
-    img: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=900&q=80",
+    caption: "Our very first text — the one that started it all 💚",
+    img: memory1,
   },
   {
     title: "Memory 2",
-    caption: "That evening that turned into the best night ever 🌿",
-    img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&q=80",
+    caption: "The day we talked for three hours straight without realising the time 🌿",
+    img: memory2,
   },
   {
     title: "Memory 3",
     caption: "The one I waited 4 years for... ✨",
-    img: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=900&q=80",
+    img: memory3,
     special: true,
   },
 ];
 
-const FINAL_PHOTO = "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&q=80";
+const FINAL_PHOTO = memory3;
 
 function WelcomePage() {
   const navigate = useNavigate();
@@ -172,9 +174,9 @@ function WelcomePage() {
               />
             </div>
             <p className="mt-5 text-base italic text-foreground sm:text-lg">
-              "Intha oru photo kaga than nan 4 years ah wait pannitu irunthen...
+              "Intha oru photo kaga thaan naan 4 years ah wait pannittu irunthen...
               <br />
-              ithu en life la romba memorable photo ah irkum 💚"
+              Ithu en life la romba memorable photo ah irukkum 💚"
             </p>
             <button
               onClick={onFinalOk}
@@ -202,8 +204,13 @@ function WelcomePage() {
                 </span>
               ))}
             </h2>
+            <p className="mt-6 text-lg leading-relaxed text-foreground/95 sm:text-xl">
+              If anything I ever said or did hurt you, I'm truly sorry.
+              <br />
+              You mean more to me than words can say.
+            </p>
             <p className="mt-6 text-2xl font-bold text-foreground sm:text-3xl">
-              Love u 💚💚💚
+              Love u, Dharaa 💚💚💚
             </p>
           </div>
         </section>
