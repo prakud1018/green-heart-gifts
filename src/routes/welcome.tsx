@@ -176,12 +176,12 @@ function WelcomePage() {
       {/* Final photo modal */}
       {showFinalPhoto && (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 px-4 backdrop-blur-md">
-          <div className="glass-card fade-up max-w-2xl rounded-2xl p-6 text-center sm:p-8">
-            <div className="overflow-hidden rounded-xl">
+          <div className="glass-card fade-up max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl p-6 text-center sm:p-8">
+            <div className="flex max-h-[60vh] w-full items-center justify-center overflow-hidden rounded-xl bg-black/40">
               <img
                 src={FINAL_PHOTO}
                 alt="The most memorable one"
-                className="h-72 w-full object-cover sm:h-96"
+                className="max-h-[60vh] max-w-full object-contain"
               />
             </div>
             <p className="mt-5 text-base italic text-foreground sm:text-lg">
