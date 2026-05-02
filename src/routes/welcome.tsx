@@ -175,23 +175,24 @@ function WelcomePage() {
 
       {/* Final photo modal */}
       {showFinalPhoto && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 px-4 backdrop-blur-md">
-          <div className="glass-card fade-up max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl p-6 text-center sm:p-8">
-            <div className="flex max-h-[60vh] w-full items-center justify-center overflow-hidden rounded-xl bg-black/40">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/80 px-4 py-8 backdrop-blur-md">
+          <div className="glass-card fade-up relative my-auto w-full max-w-2xl rounded-2xl p-6 text-center sm:p-8">
+            <div className="flex max-h-[55vh] w-full items-center justify-center overflow-hidden rounded-xl bg-black/40">
               <img
                 src={FINAL_PHOTO}
                 alt="The most memorable one"
-                className="max-h-[60vh] max-w-full object-contain"
+                className="max-h-[55vh] max-w-full object-contain"
               />
             </div>
-            <p className="mt-5 text-base italic text-foreground sm:text-lg">
+            <p className="mt-5 text-sm italic text-foreground sm:text-base">
               "Intha oru photo kaga thaan naan 4 years ah wait pannittu irunthen...
               <br />
               Ithu en life la romba memorable photo ah irukkum 💚"
             </p>
             <button
+              type="button"
               onClick={onFinalOk}
-              className="btn-glow mt-6 rounded-full px-10 py-3 text-base font-bold"
+              className="btn-glow relative z-10 mt-6 inline-block cursor-pointer rounded-full px-10 py-3 text-base font-bold"
             >
               OK 💚
             </button>
