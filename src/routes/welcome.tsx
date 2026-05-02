@@ -114,14 +114,25 @@ function WelcomePage() {
               <h2 className="text-2xl font-bold text-foreground sm:text-3xl">{m.title}</h2>
             </div>
 
-            <div className="overflow-hidden rounded-xl">
-              <img
-                src={m.img}
-                alt={m.title}
-                className="h-72 w-full object-cover transition-transform duration-700 hover:scale-110 sm:h-96"
-                loading="lazy"
-              />
-            </div>
+            {m.special ? (
+              <div className="memory-cover relative flex h-72 w-full items-center justify-center overflow-hidden rounded-xl sm:h-96">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-primary/20 to-background/60 backdrop-blur-sm" />
+                <div className="relative z-10 text-center">
+                  <div className="pulse-heart mb-3 text-6xl">💚</div>
+                  <p className="text-lg font-semibold text-foreground/90">A surprise locked inside...</p>
+                  <p className="mt-1 text-sm italic text-foreground/70">Tap below to unlock 🔒</p>
+                </div>
+              </div>
+            ) : (
+              <div className="flex h-72 w-full items-center justify-center overflow-hidden rounded-xl bg-black/30 sm:h-96">
+                <img
+                  src={m.img}
+                  alt={m.title}
+                  className="max-h-full max-w-full object-contain transition-transform duration-700 hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+            )}
 
             <p className="mt-4 text-center text-base italic text-foreground/85 sm:text-lg">
               {m.caption}
